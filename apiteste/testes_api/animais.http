@@ -1,0 +1,42 @@
+# Obter a lista de animais
+GET http://localhost:3000/colaborador
+Content-Type: application/json
+###
+
+# Inserir novo animal
+POST http://localhost:3000/colaborador
+Content-Type: application/json
+
+{
+    "nome": "ozzi",
+    "idade": "2",
+    "senha": "juca",
+}
+###
+
+# Alterar um animal
+PUT http://localhost:3000/animais
+Content-Type: application/json
+
+{
+ "_id": "621966a5e8cb9f87c2aa0d44",
+ "tipo": "gato",
+ "nome": "xuxuzinho",
+ "idade": 5
+}
+###
+
+# Excluir um animal pelo id
+DELETE http://localhost:3000/animais/622bde20aadc5aacca9ad218
+Content-Type: application/json
+###
+
+# Obter animal pelo id
+GET http://localhost:3000/animais/621966a5e8cb9f87c2aa0d44
+Content-Type: application/json
+###
+
+# Obter animais filtrando
+GET http://localhost:3000/animais/filtro/cachorro
+Content-Type: application/json
+###

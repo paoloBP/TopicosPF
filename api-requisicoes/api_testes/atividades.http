@@ -1,0 +1,62 @@
+@apiUrl = http://localhost:3000/api
+@authToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjdlZTk1MWFkZGMwNDU4NTMyNzhkNzYiLCJub21lIjoiRnVsYW5vIGNvbSBiY3J5cHQiLCJpYXQiOjE2NTQzMDIyOTUsImV4cCI6MTY1NDMwNTg5NX0.B8LM5_zraMC-RegJLrw4HNi6fcJuHaKzCQ1Jev4pY0Y
+//{{apiUrl}}
+
+# Obter a lista de atividades
+GET {{apiUrl}}/atividades
+Content-Type: application/json
+x-auth-token: {{authToken}}
+###
+
+# Inserir nova atividade
+POST {{apiUrl}}/atividades
+Content-Type: application/json
+x-auth-token: {{authToken}}
+
+{
+ "titulo": "Atividade teste", 
+ "descricao": "Codificar métodos para API de Atividades! Funcionou tudo!",
+ "status": "Concluído",
+ "prazo": "2002-05-12",
+ "agendaInicio": "2022-03-26",
+ "dataHoraTermino": "2022-03-27",
+ "requisicao": "623a74cc05a4286ab31c7881",
+ "colaborador": "623a733205a4286ab31c786c",
+ "x-auth-token": ""
+}
+
+###
+
+# Alterar uma atividade
+PUT {{apiUrl}}/atividades
+Content-Type: application/json
+x-auth-token: {{authToken}}
+
+{
+ "_id": "623f9b20d34bd647e4c458f3",   
+ "titulo": "Atividade concluída! 100%", 
+ "descricao": "Codificar métodos para API de Atividades!",
+ "status": "Concluído",
+ "prazo": "2002-05-12",
+ "agendaInicio": "2022-03-26",
+ "dataHoraTermino": "2022-03-27",
+ "requisicao": "623a74cc05a4286ab31c7881",
+ "colaborador": "623a733205a4286ab31c786c"
+ }
+###
+
+# Excluir uma atividade
+DELETE {{apiUrl}}/atividades/623f9a86d34bd647e4c458ec
+Content-Type: application/json
+x-auth-token: {{authToken}}
+###
+
+# Obter pelo id de atividade
+GET {{apiUrl}}/atividades/623f9b20d34bd647e4c458f3
+Content-Type: application/json
+###
+
+# Obter atividade filtrando
+GET {{apiUrl}}/atividades/filtro/teste
+Content-Type: application/json
+###

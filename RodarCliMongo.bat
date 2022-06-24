@@ -1,0 +1,1 @@
+"C:\Program Files\MongoDB\Server\5.0\bin\mongo" -u "admin" -p "admin" --port 27018 --authenticationDatabase "teste"

@@ -1,0 +1,41 @@
+@apiUrl = http://localhost:3000/api
+//{{apiUrl}}
+
+# Obter a lista de tipos de requisições
+GET {{apiUrl}}/tipoRequisicoes
+Content-Type: application/json
+###
+
+# Inserir novo tipo de requisição
+POST {{apiUrl}}/tipoRequisicoes
+Content-Type: application/json
+
+{
+ "descricao": "Processamento"
+}
+###
+
+# Alterar tipo de requisição
+PUT {{apiUrl}}/tipoRequisicoes
+Content-Type: application/json
+
+{
+ "_id": "623a6b111df928bf2ea328fa",
+ "descricao": "Teste Mudado"
+}
+###
+
+# Excluir um tipo de requisição
+DELETE {{apiUrl}}/tipoRequisicoes/623a6b111df928bf2ea328fa
+Content-Type: application/json
+###
+
+# Obter pelo id de tipo de requisição
+GET {{apiUrl}}/tipoRequisicoes/623a6b111df928bf2ea328fa
+Content-Type: application/json
+###
+
+# Obter tipo de requisição filtrando
+GET {{apiUrl}}/tipoRequisicoes/filtro/Teste
+Content-Type: application/json
+###
